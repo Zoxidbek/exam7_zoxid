@@ -18,23 +18,9 @@ async function bootstrap() {
   app.use(helmet());
   app.useGlobalFilters(new HttpExceptionFilter());
 
-  // swagger
-  const config = new DocumentBuilder()
-    .setTitle('CRM API')
-    .setDescription('CRM system: Students API documentation')
-    .setVersion('1.0')
-    .build();
-
-  const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api-docs', app, document, {
-    swaggerOptions: {
-      persistAuthorization: true,
-    },
-  });
 
   await app.listen(PORT, () => {
-    console.log("CRM server running at: http://localhost:4001");
-    console.log("Swagger documanatation: http://localhost:4001/api-docs");
+    console.log("Server running at: " + PORT);
   });
 }
 bootstrap();

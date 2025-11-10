@@ -13,8 +13,8 @@ import { BotModule } from './bot/bot.module';
     TypeOrmModule.forRoot({
       type: "postgres",
       username: "postgres",
-      password: "1628",
-      database: "crm_project",
+      password: "20080930",
+      database: "exam_project",
       host: "localhost",
       port: 5432,
       autoLoadEntities: true,

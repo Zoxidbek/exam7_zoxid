@@ -29,3 +29,4 @@ export class Student {
   @UpdateDateColumn()
   updatedAt: Date;
 }
+
