@@ -23,8 +23,8 @@ let StudentService = class StudentService {
         this.studentRepo = studentRepo;
     }
     async create(createStudentDto) {
-        const { fullName, phoneNumber, profession, parentName, parentNumber, img } = createStudentDto;
-        const student = this.studentRepo.create({ fullName, phoneNumber, profession, parentName, parentNumber, img });
+        const { fullname, phoneNumber, profession, parentName, parentNumber, img } = createStudentDto;
+        const student = this.studentRepo.create({ fullname, phoneNumber, profession, parentName, parentNumber, img });
         return this.studentRepo.save(student);
     }
     async findAll() {

@@ -10,14 +10,14 @@ export class StudentService {
   constructor(@InjectRepository(Student) private studentRepo: Repository<Student>){}  
 
   async create(createStudentDto: CreateStudentDto): Promise<Student> {
-    const {fullName, phoneNumber, profession, parentName, parentNumber, img} = createStudentDto
-    const student = this.studentRepo.create({fullName, phoneNumber, profession, parentName, parentNumber, img})
+    const {fullname, phoneNumber, profession, parentName, parentNumber, img} = createStudentDto
+    const student = this.studentRepo.create({fullname, phoneNumber, profession, parentName, parentNumber, img})
     return this.studentRepo.save(student);
   }
 
-  async findAll(): Promise<Student[]> {
-    return this.studentRepo.find();
-  }
+async findAll(): Promise<Student[]> {
+  return this.studentRepo.find();
+}
 
   async findOne(id: number): Promise<Student> {
     const students = await this.studentRepo.findOneBy({id: +id});

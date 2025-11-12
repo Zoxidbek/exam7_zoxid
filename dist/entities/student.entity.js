@@ -13,7 +13,7 @@ exports.Student = void 0;
 const typeorm_1 = require("typeorm");
 let Student = class Student {
     id;
-    fullName;
+    fullname;
     phoneNumber;
     profession;
     parentName;
@@ -30,7 +30,7 @@ __decorate([
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], Student.prototype, "fullName", void 0);
+], Student.prototype, "fullname", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)

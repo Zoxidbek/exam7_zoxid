@@ -2,7 +2,6 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { ValidationPipe } from '@nestjs/common';
-import { HttpExceptionFilter } from './filter/all-exception.filter';
 import helmet from 'helmet';
 
 async function bootstrap() {
@@ -16,7 +15,6 @@ async function bootstrap() {
     }));
   app.enableCors();
   app.use(helmet());
-  app.useGlobalFilters(new HttpExceptionFilter());
 
 
   await app.listen(PORT, () => {

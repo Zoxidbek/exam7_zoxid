@@ -5,7 +5,6 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import { APP_PIPE } from "@nestjs/core";
 import { ValidationPipe } from "./validation/validation.pipe";
 import { ThrottlerModule } from "@nestjs/throttler";
-import { BotModule } from './bot/bot.module';
 
 @Module({
   imports: [
@@ -21,8 +20,7 @@ import { BotModule } from './bot/bot.module';
       synchronize: true,
       logging: false,
     }),
-    StudentModule,
-    BotModule,
+    StudentModule
   ],
   controllers: [],
   providers: [

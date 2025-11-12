@@ -1,6 +1,6 @@
 export declare class Student {
     id: number;
-    fullName: string;
+    fullname: string;
     phoneNumber: string;
     profession: string;
     parentName: string;

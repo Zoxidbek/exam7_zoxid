@@ -13,7 +13,6 @@ const student_module_1 = require("./student/student.module");
 const typeorm_1 = require("@nestjs/typeorm");
 const core_1 = require("@nestjs/core");
 const validation_pipe_1 = require("./validation/validation.pipe");
-const bot_module_1 = require("./bot/bot.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -24,16 +23,15 @@ exports.AppModule = AppModule = __decorate([
             typeorm_1.TypeOrmModule.forRoot({
                 type: "postgres",
                 username: "postgres",
-                password: "1628",
-                database: "crm_project",
+                password: "20080930",
+                database: "exam_project",
                 host: "localhost",
                 port: 5432,
                 autoLoadEntities: true,
                 synchronize: true,
                 logging: false,
             }),
-            student_module_1.StudentModule,
-            bot_module_1.BotModule,
+            student_module_1.StudentModule
         ],
         controllers: [],
         providers: [

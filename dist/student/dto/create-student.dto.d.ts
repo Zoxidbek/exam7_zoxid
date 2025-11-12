@@ -1,8 +1,9 @@
 export declare class CreateStudentDto {
-    fullName: string;
+    fullname: string;
     phoneNumber: string;
     profession: string;
     parentName: string;
     parentNumber: string;
     img: string;
+    payment: boolean;
 }

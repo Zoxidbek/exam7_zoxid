@@ -13,21 +13,22 @@ exports.CreateStudentDto = void 0;
 const swagger_1 = require("@nestjs/swagger");
 const class_validator_1 = require("class-validator");
 class CreateStudentDto {
-    fullName;
+    fullname;
     phoneNumber;
     profession;
     parentName;
     parentNumber;
     img;
+    payment;
 }
 exports.CreateStudentDto = CreateStudentDto;
 __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.Length)(3, 100),
     (0, class_validator_1.IsNotEmpty)(),
-    (0, swagger_1.ApiProperty)({ description: "Full name for student", example: 'Asadbek Karimov' }),
+    (0, swagger_1.ApiProperty)({ description: "Full name for student", example: 'Zoxid Poliyozov' }),
     __metadata("design:type", String)
-], CreateStudentDto.prototype, "fullName", void 0);
+], CreateStudentDto.prototype, "fullname", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsNotEmpty)(),
@@ -60,4 +61,8 @@ __decorate([
     (0, swagger_1.ApiProperty)({ description: 'Student img URL', example: 'https://localhost:4001/uploads/student1.png' }),
     __metadata("design:type", String)
 ], CreateStudentDto.prototype, "img", void 0);
+__decorate([
+    Prop({ default: false }),
+    __metadata("design:type", Boolean)
+], CreateStudentDto.prototype, "payment", void 0);
 //# sourceMappingURL=create-student.dto.js.map
